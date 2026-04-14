@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.lms.service.CourseServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.283 s <<< FAILURE! -- in com.lms.service.CourseServiceTest
+com.lms.service.CourseServiceTest.getAllCourses_ReturnsDtoList -- Time elapsed: 0.269 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.lms.repository.EnrollmentRepository.countByCourseId(java.lang.Long)" because "this.enrollmentRepository" is null
+	at com.lms.service.CourseService.toDTO(CourseService.java:78)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)
+	at com.lms.service.CourseService.getAllCourses(CourseService.java:28)
+	at com.lms.service.CourseServiceTest.getAllCourses_ReturnsDtoList(CourseServiceTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
